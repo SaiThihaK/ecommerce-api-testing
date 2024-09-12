@@ -1,0 +1,15 @@
+version: '3.7'
+services:
+   postgres:
+    image: postgres:16
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: ecommerce
+      POSTGRES_PASSWORD: password
+      POSTGRES_USER: root
+    volumes:
+      - pg-data:/data
+
+volumes:
+  pg-data:
